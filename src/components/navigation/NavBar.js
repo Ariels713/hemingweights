@@ -13,7 +13,6 @@ import {
   Container,
   UncontrolledTooltip,
   NavLink,
-  Alert,
 } from 'reactstrap'
 // core components
 import Logo from '../svg/Logo'
@@ -48,8 +47,6 @@ function NavBar() {
         style={{ boxShadow: 'none' }}
       >
         <Container>
-          <Alert color='warning'>This is a primary alert—check it out!</Alert>
-
           <div className='navbar-translate'>
             <NavbarBrand id='navbar-brand' to='/index' tag={Link}>
               <Logo /> Heming Weights
@@ -111,7 +108,7 @@ function NavBar() {
                 <Button
                   className='btn-round'
                   color='danger'
-                  href='https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkpr-white-navbar'
+                  //   href='https://www.creative-tim.com/product/paper-kit-pro-react?ref=pkpr-white-navbar'
                   target='_blank'
                 >
                   <AnchorLink

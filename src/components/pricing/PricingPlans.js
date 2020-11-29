@@ -14,18 +14,27 @@ import {
   Container,
   Row,
   Col,
+  Alert,
 } from 'reactstrap'
 
 // core components
 
 function SectionPricing() {
-  const [activePill, setActivePill] = React.useState('1')
   // pills for the last pricing
   const [pillActive, setPillActive] = React.useState('personal')
+  const [visible, setVisible] = React.useState()
+
   return (
     <>
-      <div className='section section-pricing cd-section' id='pricing'>
-        {/* ********* PRICING 5 ********* */}
+      <div className='section section-pricing cd-section' id='plans'>
+        <Alert
+          color='danger'
+          isOpen={visible}
+          toggle={() => setVisible(false)}
+          className='text-center'
+        >
+          <b>Holy guacamole!</b> Book Today and get a free class!
+        </Alert>
         <Row className='section-gray'>
           <Col className='ml-auto mr-auto text-center' md='8'>
             <h2 className='title'>Find the right plan for you!</h2>
@@ -59,7 +68,7 @@ function SectionPricing() {
                           setPillActive('commercial')
                         }}
                       >
-                        Meal Plans
+                        Health Plans
                       </NavLink>
                     </NavItem>
                   </Nav>
@@ -85,29 +94,30 @@ function SectionPricing() {
                             <h6 className='card-category text-primary'>
                               One On One Workouts
                             </h6>
-                            <CardTitle tag='h1'>$0</CardTitle>
+                            <CardTitle tag='h1'>$299</CardTitle>
                             <ul>
                               <li>
                                 <b>5</b> Workouts
                               </li>
                               <li>
-                                <b>99+</b> Components
+                                <b>1</b> Consoltation
                               </li>
                               <li>
-                                <b>HTML</b> Elements
+                                <b>5</b> Recipes
                               </li>
                               <li>
-                                <b>14</b> Page Examples
+                                <b>3</b> Lorem Ipsum
                               </li>
                             </ul>
-                            <Button
+                            {/* <Button
                               className='btn-round'
                               color='primary'
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
+                              disabled
                             >
                               Free download
-                            </Button>
+                            </Button> */}
                           </CardBody>
                         </Card>
                       </Col>
@@ -115,31 +125,31 @@ function SectionPricing() {
                         <Card className='card-pricing' data-color='orange'>
                           <CardBody>
                             <h6 className='card-category text-success'>
-                              HTML Package
+                              Group Workouts
                             </h6>
-                            <CardTitle tag='h1'>$59</CardTitle>
+                            <CardTitle tag='h1'>$199</CardTitle>
                             <ul>
                               <li>
-                                <b>5</b> Developer
+                                <b></b> Zoom Group Workouts
                               </li>
                               <li>
-                                <b>129+</b> Components
+                                <b>5</b> Classes
                               </li>
                               <li>
-                                <b>HTML</b> Elements
+                                <b>Group</b> Up to 5
                               </li>
                               <li>
-                                <b>24</b> Page Examples
+                                <b>2</b> Lorem Ipsum
                               </li>
                             </ul>
-                            <Button
+                            {/* <Button
                               className='btn-neutral btn-round'
                               color='default'
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
                               Free download
-                            </Button>
+                            </Button> */}
                           </CardBody>
                         </Card>
                       </Col>
@@ -151,32 +161,29 @@ function SectionPricing() {
                       <Col md='6'>
                         <Card className='card-pricing'>
                           <CardBody>
-                            <h6 className='card-category text-warning'>
-                              HTML Package
+                            <h6 className='card-category text-primary'>
+                              Health Plan Silver
                             </h6>
-                            <CardTitle tag='h1'>$159</CardTitle>
+                            <CardTitle tag='h1'>$199</CardTitle>
                             <ul>
                               <li>
-                                <b>5+</b> Developers
+                                <b>1</b> Health and Growth Plan
                               </li>
                               <li>
-                                <b>199+</b> Components
+                                <b>2</b> Meal Prep Plans
                               </li>
                               <li>
-                                <b>HTML</b> Elements
-                              </li>
-                              <li>
-                                <b>34</b> Page Examples
+                                <b>3 </b> Recipes
                               </li>
                             </ul>
-                            <Button
+                            {/* <Button
                               className='btn-round'
                               color='warning'
                               href='#pablo'
                               onClick={(e) => e.preventDefault()}
                             >
                               Buy Now !
-                            </Button>
+                            </Button> */}
                           </CardBody>
                         </Card>
                       </Col>
@@ -184,31 +191,26 @@ function SectionPricing() {
                         <Card className='card-pricing' data-color='orange'>
                           <CardBody>
                             <h6 className='card-category text-success'>
-                              HTML Package
+                              Health Plans <strong>Plus</strong>
                             </h6>
-                            <CardTitle tag='h1'>$359</CardTitle>
+                            <CardTitle tag='h1'>$399</CardTitle>
                             <ul>
                               <li>
-                                <b>15</b> Developer
+                                <b>1</b> Health and Growth Plan
                               </li>
                               <li>
-                                <b>229+</b> Components
+                                <b>5</b> Meal Prep Plans
                               </li>
                               <li>
-                                <b>HTML</b> Elements
+                                <b>5 </b> Recipes
                               </li>
                               <li>
-                                <b>44</b> Page Examples
+                                <b>1 </b> Health Consultation
+                              </li>
+                              <li>
+                                <b>1 </b> Lorem Ipsum
                               </li>
                             </ul>
-                            <Button
-                              className='btn-neutral btn-round'
-                              color='default'
-                              href='#pablo'
-                              onClick={(e) => e.preventDefault()}
-                            >
-                              Free download
-                            </Button>
                           </CardBody>
                         </Card>
                       </Col>
