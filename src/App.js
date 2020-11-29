@@ -1,7 +1,14 @@
+import NavBar from './components/navigation/NavBar'
+import MainHeader from './components/header/MainHeader'
+import AboutUs from './components/about/AboutUs'
+import PricingPlans from './components/pricing/PricingPlans'
 function App() {
   return (
     <div>
-      <h1>TEst</h1>
+      <NavBar />
+      <MainHeader />
+      <AboutUs />
+      <PricingPlans />
     </div>
   )
 }
